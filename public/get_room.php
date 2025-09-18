@@ -43,7 +43,7 @@ $roomDataJSON = json_encode($roomData, JSON_PRETTY_PRINT);
 file_put_contents("ai_debug.log", "Sent to AI:\n" . $roomDataJSON . "\n", FILE_APPEND);
 
 // ✅ OpenRouter API Key (Replace this with your actual key)
-$apiKey = "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";
+$apiKey = " ";
 
 // ✅ AI Prompt
 $prompt = "Here is a list of available seminar rooms:\n$roomDataJSON\n\n" .
