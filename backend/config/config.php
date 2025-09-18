@@ -13,8 +13,8 @@ if (file_exists($env_path)) {
 
 // Database configuration
 $host = "localhost";
-$username = "root";
-$password = "root";
+$username = "";
+$password = "";
 $database = "bookmyslot";
 
 // OpenRouter configuration
