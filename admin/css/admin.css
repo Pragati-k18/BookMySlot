@@ -1,0 +1,222 @@
+/* ===== ADMIN PANEL MAIN STYLES ===== */
+:root {
+    /* Color Scheme */
+    --primary-color: #4e73df;
+    --primary-hover: #3a5bd9;
+    --secondary-color: #f8f9fc;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fa;
+    --dark-color: #5a5c69;
+    --gray-100: #f8f9fc;
+    --gray-200: #e3e6f0;
+    --gray-600: #858796;
+    --gray-800: #5a5c69;
+
+    /* Spacing */
+    --sidebar-width: 14rem;
+    --topbar-height: 3.5rem;
+}
+
+/* ===== BASE STYLES ===== */
+body.admin-panel {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    min-height: 100vh;
+    padding-top: var(--topbar-height);
+}
+
+/* ===== HEADER STYLES ===== */
+.admin-header {
+    height: var(--topbar-height);
+    z-index: 1030;
+}
+
+.admin-header .navbar-brand {
+    font-size: 1.1rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+}
+
+.admin-header .dropdown-menu {
+    font-size: 0.85rem;
+}
+
+.admin-header .dropdown-item {
+    padding: 0.35rem 1.5rem;
+}
+
+/* ===== SIDEBAR STYLES ===== */
+.admin-sidebar {
+    width: var(--sidebar-width);
+    min-height: calc(100vh - var(--topbar-height));
+    position: fixed;
+    top: var(--topbar-height);
+    left: 0;
+    transition: all 0.3s;
+    z-index: 1020;
+}
+
+.admin-sidebar .sidebar-header {
+    padding: 1.5rem 1rem 0.5rem;
+}
+
+.admin-sidebar .nav-item {
+    position: relative;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.35rem;
+    font-size: 0.85rem;
+}
+
+.admin-sidebar .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.admin-sidebar .nav-link i {
+    width: 1.2rem;
+    text-align: center;
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+.admin-main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    min-height: calc(100vh - var(--topbar-height));
+    padding-top: 1.5rem;
+    transition: all 0.3s;
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1rem 1.35rem;
+}
+
+/* ===== TABLE STYLES ===== */
+.table {
+    font-size: 0.85rem;
+}
+
+.table thead th {
+    border-bottom-width: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-login {
+    letter-spacing: 0.05em;
+}
+
+/* ===== LOGIN PAGE STYLES ===== */
+.admin-login-page {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #224abe 100%);
+}
+
+.login-container {
+    max-width: 400px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== CALENDAR STYLES ===== */
+.admin-calendar-page .fc {
+    background-color: white;
+    border-radius: 0.35rem;
+    padding: 1rem;
+}
+
+.fc-calendar-container {
+    min-height: 600px;
+}
+
+/* ===== FOOTER STYLES ===== */
+.admin-footer {
+    font-size: 0.85rem;
+    border-top: 1px solid var(--gray-200);
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-xs {
+    font-size: 0.7rem;
+}
+
+.chart-pie {
+    position: relative;
+    height: 15rem;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        margin-left: -100%;
+    }
+
+    .admin-sidebar.show {
+        margin-left: 0;
+    }
+
+    .admin-main-content,
+    .admin-footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .admin-main-content {
+        padding: 1rem;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .admin-header,
+    .admin-sidebar,
+    .admin-footer {
+        display: none !important;
+    }
+
+    .admin-main-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+    }
+}

@@ -1,0 +1,16 @@
+/vendor/
+/composer.lock
+.env
+.env.*.local
+/.env.local
+/logs/
+*.log
+/.idea/
+/.vscode/
+node_modules/
+/dist/
+/build/
+/public/uploads/
+*.sql
+*.cache
+*.bak

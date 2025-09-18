@@ -1,0 +1,319 @@
+/* ===== Base Styles ===== */
+:root {
+    --primary-color: #123C69;
+    --secondary-color: #AC3B61;
+    --accent-color: #6c5b7b;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--info-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* ===== Layout Components ===== */
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== Header/Navbar ===== */
+.navbar {
+    background-color: var(--info-color) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* ===== Sidebar ===== */
+.sidebar-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    padding: 1.5rem;
+}
+
+.sidebar .nav-link {
+    color: #495057;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(18, 60, 105, 0.1);
+    color: var(--info-color);
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* ===== Cards ===== */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--info-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+}
+
+.btn-primary:hover {
+    background-color: #0d2c4d;
+    border-color: #0d2c4d;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #8a2d4a;
+    border-color: #8a2d4a;
+}
+
+/* ===== Forms ===== */
+.form-control {
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: var(--info-color);
+    box-shadow: 0 0 0 0.25rem rgba(18, 60, 105, 0.25);
+}
+
+/* ===== Tables ===== */
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: var(--info-color);
+    color: white;
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(172, 59, 97, 0.1);
+}
+
+/* ===== Calendar ===== */
+.fc {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.fc-header-toolbar {
+    margin-bottom: 1rem !important;
+}
+
+
+/* Add to existing chat styles */
+.room-options {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.booking-confirmation {
+    background: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    padding: 10px;
+    margin: 10px 0;
+}
+/******************/
+/* AI Recommendation Styles */
+#room_result {
+    transition: all 0.3s ease;
+}
+
+#room_result .alert {
+    border-left: 4px solid;
+}
+
+#room_result ul {
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+#room_result li {
+    margin-bottom: 0.25rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--info-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .sidebar-container {
+        position: static;
+        height: auto;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ===== Utility Classes ===== */
+.text-primary {
+    color: var(--info-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--light-color) !important;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Add to existing styles */
+.room-options {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.booking-confirmation {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.confirm-btn {
+    background: #28a745!important;
+    margin-right: 10px;
+}
+
+.cancel-btn {
+    background: #dc3545!important;
+}
+
