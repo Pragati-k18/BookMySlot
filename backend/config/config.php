@@ -12,10 +12,10 @@ if (file_exists($env_path)) {
 }
 
 // Database configuration
-$host = "localhost";
+$host = "";
 $username = "";
 $password = "";
-$database = "bookmyslot";
+$database = "";
 
 // OpenRouter configuration
 define('OPENROUTER_API_KEY', getenv('OPENROUTER_API_KEY'));
